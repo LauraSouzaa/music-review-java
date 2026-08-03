@@ -33,19 +33,20 @@ void main() {
         scanner.nextLine();
         System.out.println("Digite o nome do artista que deseja cadastrar: ");
         cadastrarArtista = scanner.nextLine();
-        System.out.println("Artista " + cadastrarArtista + " cadastrado (a)!");
+        System.out.println("Artista cadastrado com sucesso!");
+        System.out.println();
         break;
       case 2:
         scanner.nextLine();
         System.out.println("Digite o nome do álbum que deseja cadastrar: ");
         cadastrarAlbum = scanner.nextLine();
-        System.out.println("Álbum cadastrado: " + cadastrarAlbum);
+        System.out.println("Álbum cadastrado com sucesso!");
         break;
       case 3:
         scanner.nextLine();
         System.out.println("Digite o nome da música que deseja cadastrar: ");
         cadastrarMusica = scanner.nextLine();
-        System.out.println("Música " + cadastrarMusica + " cadastrada!");
+        System.out.println("Música cadastrada com sucesso!");
         break;
       case 4:
         scanner.nextLine();
@@ -61,6 +62,10 @@ void main() {
               avaliacaoArtista = scanner.nextInt();
               if (avaliacaoArtista >= 0 && avaliacaoArtista <= 10) {
                 System.out.println("Avaliação registrada!");
+                System.out.println();
+                System.out.println("Artista: " + artistaEscolhido);
+                System.out.println("Nota: " + avaliacaoArtista);
+                System.out.println();
               } else {
                 System.out.println("Nota inválida.");
               }
@@ -77,6 +82,10 @@ void main() {
               avaliacaoAlbum = scanner.nextInt();
               if (avaliacaoAlbum >= 0 && avaliacaoAlbum <= 10) {
                 System.out.println("Avaliação registrada!");
+                System.out.println();
+                System.out.println("Álbum escolhido: " + albumEscolhido);
+                System.out.println("Nota: " + avaliacaoAlbum);
+                System.out.println();
               } else {
                 System.out.println("Nota inválida.");
               }
@@ -93,6 +102,10 @@ void main() {
               avaliacaoMusica = scanner.nextInt();
               if (avaliacaoMusica >= 0 && avaliacaoMusica <= 10) {
                 System.out.println("Avaliação registrada!");
+                System.out.println();
+                System.out.println("Música escolhida: " + musicaEscolhida);
+                System.out.println("Nota: " + avaliacaoMusica);
+                System.out.println();
               } else {
                 System.out.println("Nota inválida.");
               }
@@ -103,11 +116,13 @@ void main() {
         }
         break;
       case 0:
-        System.out.println("Obrigada por usar o Music Review!");
+        System.out.println("Obrigada por utilizar o Music Review!");
         break;
       default:
         System.out.println("Opção inválida!");
         break;
     }
   }
+  scanner.close();
 }
+
